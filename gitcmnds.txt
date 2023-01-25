@@ -1,0 +1,140 @@
+
+C:\GitPractice>git branch fea1
+
+C:\GitPractice>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\GitPractice>git log
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (HEAD -> main, origin/main, fea1)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+C:\GitPractice>git branch fea1
+fatal: a branch named 'fea1' already exists
+
+C:\GitPractice>git switch fea1
+Switched to branch 'fea1'
+
+C:\GitPractice>git log
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (HEAD -> fea1, origin/main, main)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+C:\GitPractice>git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\GitPractice>git log
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (HEAD -> main, origin/main, fea1)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+C:\GitPractice>git switch fea1
+Switched to branch 'fea1'
+
+C:\GitPractice>git log
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (HEAD -> fea1, origin/main, main)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+C:\GitPractice>git status
+On branch fea1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\GitPractice>git add .
+
+C:\GitPractice>git commit . -m "this is coming from fea1"
+[fea1 15e5c63] this is coming from fea1
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+ create mode 100644 hello.html
+
+C:\GitPractice>git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\GitPractice>git log
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (HEAD -> main, origin/main)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+
+C:\GitPractice>git merge fea1
+Updating e7d534b..15e5c63
+Fast-forward
+ hello.html | 5 +++++
+ hello.txt  | 4 +++-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+ create mode 100644 hello.html
+
+C:\GitPractice>git log
+commit 15e5c63e56183c42ab617de2025eb94a4544701b (HEAD -> main, fea1)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:49:11 2023 +0530
+
+    this is coming from fea1
+
+commit e7d534bc58c0b770635c07497ee9065d51c7e0c9 (origin/main)
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 10:13:27 2023 +0530
+
+    my 2nd commit
+
+commit 4c9074aa994af772d77b2b3f3f4858c896eaf5a5
+Author: Pratik Patil <officialpratik4u@gmail.com>
+Date:   Wed Jan 25 09:51:03 2023 +0530
+
+    commmitng file
+
+C:\GitPractice>
